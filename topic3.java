@@ -16,6 +16,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Topic 3: Using operators and Decision Constructs");
         part1(); // operators, operands and expressions
+        part2(); // Using switch statement
     }
     public static void part1() {
          /*
@@ -54,8 +55,46 @@ public class Main {
             below are if and else statements constructs plus equality operator
          */
         if(number % 2 == 0) // == is the boolean expression
-            System.out.println("Your number is EVEN");
+            System.out.println(number + " is an EVEN number");
         else
-            System.out.println("Number is ODD");
+            System.out.println(number + " is an ODD number");
+    }
+    
+     public static void part2(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Using Switch statement to find day of the weeek");
+        System.out.print("Please enter a number between 1 and 7 to find out: ");
+
+        int week = scanner.nextInt();
+        String day;
+
+        switch (week) {
+            case 1:
+                day = "Sunday is the 1st day of the week";
+                break;
+            case 2:
+                day = "Monday is the 2nd day of the week";
+                break;
+            case 3:
+                day = "Tuesday is the 3rd day of the week";
+                break;
+            case 4:
+                day = "Wednesday is the 4th day of the week";
+                break;
+            case 5:
+                day = "Thursday is the 5th day of the week";
+                break;
+            case 6:
+                day = "Friday is the 6th day of the week";
+                break;
+            case 7:
+                day = "Saturday is the 7th and last day of the week";
+                break;
+            default:
+                day = "Invalid day";
+                break;
+        }
+        System.out.println(day);
     }
 }
