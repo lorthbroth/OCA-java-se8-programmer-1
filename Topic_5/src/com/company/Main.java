@@ -1,3 +1,11 @@
+/*  **** Topic 3: Using Loop Construct
+* Objectives :
+* 1 Create and use while loops
+* 2 Create and use do/while loops
+* 3 Compare loop construct
+* 4 Use break and continue
+*/ 
+
 package com.company;
 
 import java.util.Scanner;
