@@ -11,9 +11,32 @@ package com.company;
 * (such as NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException, ClassCastException)
 * */
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        //Differentiate among checked exceptions, unchecked exceptions, and Errors
+        Dominic dominic = new Dominic();
+        dominic.tryCatchFinally();
+
+        try {
+            dominic.tryWithResources();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        dominic.throwException();
+        try {
+            dominic.tryWithResources();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
